@@ -1,6 +1,6 @@
 {
   "name": "basic-mmo-phaser",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": " Very basic multiplayer online game example made with Phaser, Node.js and Socket.io ",
   "main": "server.js",
   "scripts": {
