@@ -2,38 +2,36 @@
  * Created by Jerome on 03-03-17.
  */
 
-var Client = {};
+const Client = {};
 Client.socket = io.connect();
 
-Client.sendTest = function(){
-    console.log("test sent");
-    Client.socket.emit('test');
+Client.sendTest = () => {
+  console.log("test sent");
+  Client.socket.emit('test');
 };
 
-Client.askNewPlayer = function(){
-    Client.socket.emit('newplayer');
+Client.askNewPlayer = () => {
+  Client.socket.emit('newplayer');
 };
 
-Client.sendClick = function(x,y){
+Client.sendClick = (x,y) => {
   Client.socket.emit('click',{x:x,y:y});
 };
 
-Client.socket.on('newplayer',function(data){
-    Game.addNewPlayer(data.id,data.x,data.y);
+Client.socket.on('newplayer', (data) => {
+  Game.addNewPlayer(data.id, data.x, data.y);
 });
 
-Client.socket.on('allplayers',function(data){
-    for(var i = 0; i < data.length; i++){
-        Game.addNewPlayer(data[i].id,data[i].x,data[i].y);
-    }
+Client.socket.on('allplayers', (data) => {
+  for (let i = 0, max = data.length; i < max; i++){
+    Game.addNewPlayer(data[i].id, data[i].x, data[i].y);
+  }
 
-    Client.socket.on('move',function(data){
-        Game.movePlayer(data.id,data.x,data.y);
-    });
+  Client.socket.on('move', (data) => {
+    Game.movePlayer(data.id, data.x - 32, data.y - 32);
+  });
 
-    Client.socket.on('remove',function(id){
-        Game.removePlayer(id);
-    });
+  Client.socket.on('remove', (id) => {
+    Game.removePlayer(id);
+  });
 });
-
-

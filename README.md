@@ -8,6 +8,11 @@ For the client, Phaser is included in the code (`js/phaser.js`). You will need [
 
 Clone the repository. Inside the newly created directory, run `npm install` to install the Node.js packages listed in `package.json`. Then run `node server.js` to start the server. The server will listen to connections on port `8081`; you can change that behaviour by editing the code. You can access the app by navigating to http://localhost:8081/.
 
+## todo tasks
+- Install Tiled on MacAir
+- Expand the world, see tutorial on [big maps with Phaser 3](https://www.dynetisgames.com/2018/02/24/manage-big-maps-phaser-3/)
+- Move the sprite center rather than top left corner to where the mouse clicked.
+
 ## Useful resources
 - [Pathfinding A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
 
