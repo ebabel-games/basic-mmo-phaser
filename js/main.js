@@ -1,5 +1,6 @@
-/**
- * Created by Jerome on 03-03-16.
+/*
+ * Author: Jerome Renaux
+ * E-mail: jerome.renaux@gmail.com
  */
 //noinspection JSCheckFunctionSignatures,JSCheckFunctionSignatures,JSCheckFunctionSignatures
 const game = new Phaser.Game(24*32, 17*32, Phaser.AUTO, document.getElementById('game'));

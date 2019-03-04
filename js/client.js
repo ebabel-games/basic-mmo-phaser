@@ -1,5 +1,6 @@
-/**
- * Created by Jerome on 03-03-17.
+/*
+ * Author: Jerome Renaux
+ * E-mail: jerome.renaux@gmail.com
  */
 
 const Client = {};
