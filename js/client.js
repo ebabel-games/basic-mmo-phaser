@@ -15,7 +15,7 @@ Client.askNewPlayer = () => {
 };
 
 Client.sendClick = (x,y) => {
-  Client.socket.emit('click',{x:x,y:y});
+  Client.socket.emit('click',{x, y});
 };
 
 Client.socket.on('newplayer', (data) => {
@@ -28,7 +28,7 @@ Client.socket.on('allplayers', (data) => {
   }
 
   Client.socket.on('move', (data) => {
-    Game.movePlayer(data.id, data.x - 32, data.y - 32);
+    Game.movePlayer(data.id, data.x - 32, data.y - 50);
   });
 
   Client.socket.on('remove', (id) => {
